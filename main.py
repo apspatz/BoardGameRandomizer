@@ -12,14 +12,21 @@ with open(csvpath, newline='') as csvfile:
 
     Header = next(csvreader, None)
 
+    Name = []
+    Type = []
+    Min_player = []
+    Max_player = []
+    Play_time = []
+
     for row in csvreader:
         count += 1
-        print(count)
+        Name.append(row[0])
+        Type.append(row[1])
+        Min_player.append(row[2])
+        Max_player.append(row[3])
+        Play_time.append(row[4])
     
+    GameNum = int(random()*count-1) 
 
-    Name = 'a'
-    Type = 'a'
-    Min_player = 0
-    Max_player = 0
-    Play_time = 0
+    
 
